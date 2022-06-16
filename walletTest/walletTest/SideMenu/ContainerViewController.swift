@@ -24,7 +24,7 @@ class ContainerViewController: UIViewController, ContainerViewControllerDelegate
     }
 
     func configureHomeViewController() {
-        let homeVC = ViewControllerBuilder.createViewController(viewControllerId: "HomeViewController") as! HomeViewController
+        let homeVC = UIViewController.createViewController(viewControllerId: "HomeViewController") as! HomeViewController
         homeVC.delegate = self
         controller = homeVC
         view.addSubview(controller.view)
@@ -33,7 +33,7 @@ class ContainerViewController: UIViewController, ContainerViewControllerDelegate
     
     func configureMenuViewController() {
         if menuViewController == nil {
-            let menuVC = ViewControllerBuilder.createViewController(viewControllerId: "MenuViewController") as! MenuViewController
+            let menuVC = UIViewController.createViewController(viewControllerId: "MenuViewController") as! MenuViewController
             menuVC.delegate = self
             menuViewController = menuVC
             view.insertSubview(menuViewController.view, at: 0)

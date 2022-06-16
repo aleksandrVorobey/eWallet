@@ -1,15 +1,14 @@
 //
-//  ModuleBuilder.swift
+//  UIViewController+Extension.swift
 //  walletTest
 //
-//  Created by admin on 14.06.2022.
+//  Created by admin on 16.06.2022.
 //
 
 import Foundation
 import UIKit
 
-class ViewControllerBuilder {
-    
+extension UIViewController {
     static func createViewController(viewControllerId: String) -> UIViewController {
         var controller: UIViewController!
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

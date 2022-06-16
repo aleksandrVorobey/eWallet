@@ -12,8 +12,8 @@
 		84B51D3F2858DAF000EEA41C /* AddCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B51D3D2858DAF000EEA41C /* AddCollectionViewCell.xib */; };
 		84B51D422858DB0500EEA41C /* PersonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B51D402858DB0500EEA41C /* PersonCollectionViewCell.swift */; };
 		84B51D432858DB0500EEA41C /* PersonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B51D412858DB0500EEA41C /* PersonCollectionViewCell.xib */; };
-		84B51D452859060D00EEA41C /* ViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B51D442859060D00EEA41C /* ViewControllerBuilder.swift */; };
 		84B51D4A285B339500EEA41C /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B51D49285B339500EEA41C /* ContainerViewController.swift */; };
+		84BE4EAC285B691500524E7C /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE4EAB285B691500524E7C /* UIViewController+Extension.swift */; };
 		84C68FA22857990400374D09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C68FA12857990400374D09 /* AppDelegate.swift */; };
 		84C68FA42857990400374D09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C68FA32857990400374D09 /* SceneDelegate.swift */; };
 		84C68FA62857990400374D09 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C68FA52857990400374D09 /* LoginViewController.swift */; };
@@ -31,8 +31,8 @@
 		84B51D3D2858DAF000EEA41C /* AddCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddCollectionViewCell.xib; sourceTree = "<group>"; };
 		84B51D402858DB0500EEA41C /* PersonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCollectionViewCell.swift; sourceTree = "<group>"; };
 		84B51D412858DB0500EEA41C /* PersonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonCollectionViewCell.xib; sourceTree = "<group>"; };
-		84B51D442859060D00EEA41C /* ViewControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerBuilder.swift; sourceTree = "<group>"; };
 		84B51D49285B339500EEA41C /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		84BE4EAB285B691500524E7C /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		84C68F9E2857990400374D09 /* walletTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = walletTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C68FA12857990400374D09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84C68FA32857990400374D09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +83,14 @@
 			path = SideMenu;
 			sourceTree = "<group>";
 		};
+		84BE4EAA285B687600524E7C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				84BE4EAB285B691500524E7C /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		84C68F952857990400374D09 = {
 			isa = PBXGroup;
 			children = (
@@ -104,7 +112,7 @@
 			children = (
 				84C68FA12857990400374D09 /* AppDelegate.swift */,
 				84C68FA32857990400374D09 /* SceneDelegate.swift */,
-				84B51D442859060D00EEA41C /* ViewControllerBuilder.swift */,
+				84BE4EAA285B687600524E7C /* Extensions */,
 				84B51D46285A422F00EEA41C /* Services */,
 				84B51D4B285B594700EEA41C /* SideMenu */,
 				84C68FB628589A1500374D09 /* LoginView */,
@@ -291,9 +299,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				84B51D382858C8A700EEA41C /* HomePresenter.swift in Sources */,
+				84BE4EAC285B691500524E7C /* UIViewController+Extension.swift in Sources */,
 				84C68FC42858B64100374D09 /* HomeViewController.swift in Sources */,
 				84C68FC62858C02300374D09 /* MenuViewController.swift in Sources */,
-				84B51D452859060D00EEA41C /* ViewControllerBuilder.swift in Sources */,
 				84C68FC228589BD300374D09 /* LoginPresenter.swift in Sources */,
 				84B51D422858DB0500EEA41C /* PersonCollectionViewCell.swift in Sources */,
 				84C68FA62857990400374D09 /* LoginViewController.swift in Sources */,
