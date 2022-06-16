@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GqM-Mb-190">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="walletTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="walletTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,14 +32,8 @@
                                     <constraint firstAttribute="width" constant="135" id="sNM-Tg-t3t"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkL-cJ-tw1">
-                                <rect key="frame" x="162" y="739.66666666666663" width="159" height="19.333333333333371"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxH-F0-MgB">
-                                <rect key="frame" x="162" y="677.66666666666663" width="187" height="50"/>
+                                <rect key="frame" x="162" y="667" width="187" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.67450980392156867" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="YaI-qK-81e"/>
@@ -55,6 +48,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signInBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ugY-C1-yJc"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="MVy-vW-cSu">
                                 <rect key="frame" x="162" y="74" width="193" height="28.666666666666671"/>
@@ -115,15 +111,23 @@ Join For Free.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8t-io-FgM">
+                                <rect key="frame" x="165" y="747" width="180" height="31"/>
+                                <color key="tintColor" red="0.1639037434" green="0.058055579160000002" blue="0.02864709298" alpha="0.80145384929999997" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Create an account"/>
+                                <connections>
+                                    <action selector="createAccountBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7B5-fM-aAS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bkL-cJ-tw1" firstAttribute="top" secondItem="nxH-F0-MgB" secondAttribute="bottom" constant="12" id="6ay-HD-zhR"/>
+                            <constraint firstItem="Q8t-io-FgM" firstAttribute="leading" secondItem="Ed4-RF-Psp" secondAttribute="trailing" constant="30" id="1eB-du-ImZ"/>
                             <constraint firstItem="MVy-vW-cSu" firstAttribute="leading" secondItem="Ed4-RF-Psp" secondAttribute="trailing" constant="27" id="ESJ-wY-qde"/>
                             <constraint firstItem="Ed4-RF-Psp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Gcb-yx-gY2"/>
                             <constraint firstItem="n6a-fL-P78" firstAttribute="leading" secondItem="Ed4-RF-Psp" secondAttribute="trailing" constant="27" id="KQm-KB-U0e"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bkL-cJ-tw1" secondAttribute="trailing" constant="54" id="Nbr-Ip-U9n"/>
                             <constraint firstItem="Ed4-RF-Psp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="PGP-d9-LFb"/>
                             <constraint firstItem="MVy-vW-cSu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="RcP-0U-gFb"/>
                             <constraint firstItem="nxH-F0-MgB" firstAttribute="leading" secondItem="Ed4-RF-Psp" secondAttribute="trailing" constant="27" id="Ve6-Rh-1KI"/>
@@ -132,11 +136,12 @@ Join For Free.</string>
                             <constraint firstItem="n6a-fL-P78" firstAttribute="top" secondItem="MVy-vW-cSu" secondAttribute="bottom" constant="7" id="bBY-Dn-MHY"/>
                             <constraint firstItem="9A2-L1-YY8" firstAttribute="leading" secondItem="Ed4-RF-Psp" secondAttribute="trailing" constant="27" id="baI-fB-Bc1"/>
                             <constraint firstAttribute="trailing" secondItem="9A2-L1-YY8" secondAttribute="trailing" constant="27" id="ehM-Bn-xjH"/>
-                            <constraint firstItem="bkL-cJ-tw1" firstAttribute="leading" secondItem="Ed4-RF-Psp" secondAttribute="trailing" constant="27" id="eoR-NG-D89"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nxH-F0-MgB" secondAttribute="trailing" constant="26" id="fms-pW-e5a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q8t-io-FgM" secondAttribute="trailing" constant="30" id="frf-PC-WwG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MVy-vW-cSu" secondAttribute="trailing" constant="20" id="j53-D3-a9g"/>
-                            <constraint firstAttribute="bottom" secondItem="bkL-cJ-tw1" secondAttribute="bottom" constant="53" id="j5Y-Ws-W5A"/>
+                            <constraint firstItem="Q8t-io-FgM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="jnM-3G-UPD"/>
                             <constraint firstItem="9A2-L1-YY8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nwr-dL-FDJ"/>
+                            <constraint firstItem="Q8t-io-FgM" firstAttribute="top" secondItem="nxH-F0-MgB" secondAttribute="bottom" constant="30" id="xGi-uU-f5o"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -144,10 +149,10 @@ Join For Free.</string>
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="69.642857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="h2U-S3-M8H">
             <objects>
-                <viewController id="qyq-pr-0gs" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="qyq-pr-0gs" customClass="HomeViewController" customModule="walletTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u9t-2G-D8k">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -192,6 +197,9 @@ Join For Free.</string>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Union"/>
+                                <connections>
+                                    <action selector="menuBtnTapped:" destination="qyq-pr-0gs" eventType="touchUpInside" id="Iwn-6x-sWN"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4t3-1g-nrh">
                                 <rect key="frame" x="25" y="159" width="340" height="19.666666666666657"/>
@@ -213,6 +221,9 @@ Join For Free.</string>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="Group 21"/>
+                                        <connections>
+                                            <action selector="addBalanceBtnTapped:" destination="qyq-pr-0gs" eventType="touchUpInside" id="cXq-xH-16c"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="RMB-Yg-gbS">
                                         <rect key="frame" x="25.000000000000007" y="33.333333333333343" width="90.666666666666686" height="49"/>
@@ -262,28 +273,19 @@ Join For Free.</string>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Group 75"/>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SSO-ib-JLZ">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SSO-ib-JLZ">
                                 <rect key="frame" x="0.0" y="404.66666666666669" width="375" height="120.00000000000006"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="fmQ-qf-uWC"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LBx-bC-jK6">
-                                    <size key="itemSize" width="128" height="128"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LBx-bC-jK6">
+                                    <size key="itemSize" width="128" height="120.00000000000006"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="o9b-Rr-Mhj">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GjK-bD-2sL">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Services" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5J-fV-7L1">
                                 <rect key="frame" x="25" y="553" width="292" height="19.333333333333371"/>
@@ -294,7 +296,7 @@ Join For Free.</string>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBM-Xj-Xzb">
                                 <rect key="frame" x="325" y="554.66666666666663" width="25" height="16"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="4uI-OD-SSj"/>
+                                    <constraint firstAttribute="width" constant="25" id="AxV-Nq-6F3"/>
                                     <constraint firstAttribute="height" constant="16" id="l8z-vw-cDu"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
@@ -346,6 +348,11 @@ Money</string>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="Group 70"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="12"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1x1-Pb-LJL">
                                                         <rect key="frame" x="14" y="66" width="32.333333333333336" height="24"/>
@@ -369,6 +376,11 @@ Money</string>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="Group 70"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="12"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wro-yZ-CqF">
                                                         <rect key="frame" x="14" y="66" width="32.333333333333336" height="24"/>
@@ -521,7 +533,6 @@ Money</string>
                             <constraint firstItem="SSO-ib-JLZ" firstAttribute="leading" secondItem="D81-AS-dln" secondAttribute="leading" id="EbA-dr-LNR"/>
                             <constraint firstItem="qUH-Vq-oXM" firstAttribute="top" secondItem="IWN-x9-F5J" secondAttribute="bottom" constant="40" id="Fam-VK-Nqf"/>
                             <constraint firstItem="iHK-u0-Oqx" firstAttribute="top" secondItem="D81-AS-dln" secondAttribute="top" constant="31" id="KdQ-Sw-Tea"/>
-                            <constraint firstItem="eBM-Xj-Xzb" firstAttribute="leading" relation="lessThanOrEqual" secondItem="S5J-fV-7L1" secondAttribute="trailing" constant="8" symbolic="YES" id="Qfp-eM-pPa"/>
                             <constraint firstItem="D81-AS-dln" firstAttribute="trailing" secondItem="4Rg-mu-W9L" secondAttribute="trailing" constant="25" id="Ukj-zD-rhg"/>
                             <constraint firstItem="D81-AS-dln" firstAttribute="trailing" secondItem="eBM-Xj-Xzb" secondAttribute="trailing" constant="25" id="X5t-DP-VAj"/>
                             <constraint firstItem="LIj-Nn-70o" firstAttribute="leading" secondItem="D81-AS-dln" secondAttribute="leading" constant="25" id="YgC-1I-lfS"/>
@@ -539,20 +550,24 @@ Money</string>
                             <constraint firstItem="S5J-fV-7L1" firstAttribute="leading" secondItem="D81-AS-dln" secondAttribute="leading" constant="25" id="osk-Ej-YmK"/>
                             <constraint firstItem="SSO-ib-JLZ" firstAttribute="top" secondItem="nwt-V2-9rK" secondAttribute="bottom" constant="20" id="pWx-eq-t57"/>
                             <constraint firstItem="4Rg-mu-W9L" firstAttribute="top" secondItem="D81-AS-dln" secondAttribute="top" constant="31" id="pgk-qF-hss"/>
+                            <constraint firstItem="eBM-Xj-Xzb" firstAttribute="leading" secondItem="S5J-fV-7L1" secondAttribute="trailing" constant="8" id="qMW-A2-6f2"/>
                             <constraint firstItem="SSO-ib-JLZ" firstAttribute="trailing" secondItem="D81-AS-dln" secondAttribute="trailing" id="qzl-cW-OPd"/>
                             <constraint firstItem="D81-AS-dln" firstAttribute="trailing" secondItem="4t3-1g-nrh" secondAttribute="trailing" constant="10" id="suh-c2-7H7"/>
                             <constraint firstItem="D81-AS-dln" firstAttribute="trailing" secondItem="LIj-Nn-70o" secondAttribute="trailing" constant="25" id="xNN-Ji-CCU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="SSO-ib-JLZ" id="LG8-7u-VPB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="npb-Px-7aS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="713.04347826086962" y="69.642857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Menu View Controller-->
         <scene sceneID="tYs-XQ-wSB">
             <objects>
-                <viewController id="GqM-Mb-190" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuViewController" id="GqM-Mb-190" customClass="MenuViewController" customModule="walletTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u7z-zL-Zv5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -634,6 +649,9 @@ Money</string>
                                 <color key="tintColor" red="0.12941176469999999" green="0.13725490200000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="multiply" catalog="system"/>
+                                <connections>
+                                    <action selector="closeBtnTapped:" destination="GqM-Mb-190" eventType="touchUpInside" id="Srm-n3-YrF"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xJ3-os-chM">
                                 <rect key="frame" x="30.000000000000007" y="263" width="106.66666666666669" height="337"/>
